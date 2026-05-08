@@ -1,0 +1,97 @@
+{
+  "login_data": {
+
+    "valid_user": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    }
+
+  },
+
+  "valid_products": {
+
+    "backpack": {
+      "product_name": "Sauce Labs Backpack"
+    },
+
+    "bike_light": {
+      "product_name": "Sauce Labs Bike Light"
+    },
+
+    "bolt_tshirt": {
+      "product_name": "Sauce Labs Bolt T-Shirt"
+    }
+  },
+
+  "sorting_data": {
+
+    "name_a_to_z": "az",
+
+    "price_low_to_high": "lohi"
+  },
+
+  "checkout_data": {
+
+    "valid_checkout": {
+
+      "product_name": "Sauce Labs Backpack",
+
+      "first_name": "Rakesh",
+
+      "last_name": "Kumar",
+
+      "zip_code": "500001",
+
+      "success_message": "Thank you for your order!"
+    },
+
+    "empty_firstname": {
+
+      "product_name": "Sauce Labs Backpack",
+
+      "first_name": "",
+
+      "last_name": "Kumar",
+
+      "zip_code": "500001",
+
+      "error_message": "First Name is required"
+    },
+
+    "empty_lastname": {
+
+      "product_name": "Sauce Labs Backpack",
+
+      "first_name": "Rakesh",
+
+      "last_name": "",
+
+      "zip_code": "500001",
+
+      "error_message": "Last Name is required"
+    },
+
+    "empty_zipcode": {
+
+      "product_name": "Sauce Labs Backpack",
+
+      "first_name": "Rakesh",
+
+      "last_name": "Kumar",
+
+      "zip_code": "",
+
+      "error_message": "Postal Code is required"
+    }
+  },
+
+  "logout_data": {
+
+    "expected_url": "https://www.saucedemo.com/"
+  },
+
+  "cart_data": {
+
+    "cart_count": "1"
+  }
+}

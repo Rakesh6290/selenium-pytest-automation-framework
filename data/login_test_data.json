@@ -1,0 +1,80 @@
+{
+  "valid_user": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+
+  "invalid_username_user": {
+    "username": "wrong_user",
+    "password": "secret_sauce"
+  },
+
+  "invalid_password_user": {
+    "username": "standard_user",
+    "password": "wrong_password"
+  },
+
+  "both_invalid_user": {
+    "username": "wrong_user",
+    "password": "wrong_password"
+  },
+
+  "locked_user": {
+    "username": "locked_out_user",
+    "password": "secret_sauce"
+  },
+
+  "empty_username_user": {
+    "username": "",
+    "password": "secret_sauce"
+  },
+
+  "empty_password_user": {
+    "username": "standard_user",
+    "password": ""
+  },
+
+  "empty_user": {
+    "username": "",
+    "password": ""
+  },
+
+  "space_username_user": {
+    "username": " standard_user ",
+    "password": "secret_sauce"
+  },
+
+  "space_password_user": {
+    "username": "standard_user",
+    "password": " secret_sauce "
+  },
+
+  "uppercase_username_user": {
+    "username": "STANDARD_USER",
+    "password": "secret_sauce"
+  },
+
+  "uppercase_password_user": {
+    "username": "standard_user",
+    "password": "SECRET_SAUCE"
+  },
+
+  "long_username_user": {
+    "username": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "password": "secret_sauce"
+  },
+
+  "long_password_user": {
+    "username": "standard_user",
+    "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+
+  "messages": {
+    "invalid_credentials": "Epic sadface",
+    "username_required": "Username is required",
+    "password_required": "Password is required",
+    "locked_user_error": "locked out",
+    "login_success_url": "inventory",
+    "security_redirect_url": "saucedemo"
+  }
+}
