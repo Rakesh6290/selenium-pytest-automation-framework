@@ -2,7 +2,7 @@
 
 A scalable and maintainable UI automation framework built using Python, Selenium, Pytest, and Page Object Model (POM) architecture.
 
-This project automates end-to-end test scenarios for the SauceDemo e-commerce application, including login, product validation, cart operations, sorting, checkout, logout, and negative test scenarios.I implemented GitHub webhook integrated Jenkins CI/CD pipeline using ngrok for local-to-public tunneling, enabling automatic test execution on every push.
+This project automates end-to-end test scenarios for the SauceDemo e-commerce application, including login, product validation, cart operations, sorting, checkout, logout, and negative test scenarios.
 
 ---
 
