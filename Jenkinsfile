@@ -16,7 +16,7 @@ pipeline {
 
             steps {
 
-                bat 'py -m pytest --html=report.html --alluredir=allure-results'
+                bat 'py -m pytest --html=reports/report.html --self-contained-html --alluredir=allure-results'
             }
         }
     }
@@ -26,12 +26,21 @@ pipeline {
         always {
 
             publishHTML([
+
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: '.',
+
+                reportDir: 'reports',
                 reportFiles: 'report.html',
                 reportName: 'Automation Report'
+            ])
+
+            // OPTIONAL: Allure report
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
             ])
         }
     }
