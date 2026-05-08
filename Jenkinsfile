@@ -4,16 +4,8 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-
-            steps {
-
-                git 'https://github.com/Rakesh6290/selenium-pytest-automation-framework.git'
-            }
-        }
-
         stage('Install Dependencies') {
-                            
+
             steps {
 
                 bat 'pip install -r requirements.txt'
