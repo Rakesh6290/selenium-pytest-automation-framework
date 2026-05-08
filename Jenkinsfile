@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                bat 'py -m pip install -r requirements.txt'
+                bat '"C:/Users/Rakesh/AppData/Local/Programs/Python/Python311/python.exe" -m pip install -r requirements.txt'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
             steps {
 
-                bat 'py -m pytest --html=reports/report.html --self-contained-html --alluredir=allure-results'
+                bat '"C:/Users/Rakesh/AppData/Local/Programs/Python/Python311/python.exe" -m pytest --html=reports/report.html --self-contained-html --alluredir=allure-results'
             }
         }
     }
