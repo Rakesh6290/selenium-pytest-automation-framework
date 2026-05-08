@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                bat 'python -m pip install -r requirements.txt'
+                bat 'py -m pip install -r requirements.txt'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
 
             steps {
 
-                bat 'pytest --html=report.html --alluredir=allure-results'
+                bat 'py -m pytest --html=report.html --alluredir=allure-results'
             }
         }
     }
