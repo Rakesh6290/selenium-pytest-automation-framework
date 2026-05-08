@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                bat 'pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
