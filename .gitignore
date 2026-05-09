@@ -6,5 +6,4 @@ allure-results/
 allure-report/
 screenshots/
 .idea/
-drivers/*.exe
 *.log
