@@ -5,7 +5,7 @@ A scalable and maintainable UI automation framework built using Python, Selenium
 This project automates end-to-end test scenarios for the SauceDemo e-commerce application, including login, product validation, cart operations, sorting, checkout, logout, and negative test scenarios.
 
 ---
-    
+            
 # Project Highlights        
 
 * Selenium WebDriver with Python
