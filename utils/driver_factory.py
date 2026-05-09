@@ -1,46 +1,40 @@
 from selenium import webdriver
-
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.edge.service import Service as EdgeService
-
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+import os
 
 
 def get_driver(browser="chrome"):
 
+    project_root = os.getcwd()
+
     if browser.lower() == "chrome":
 
+        driver_path = os.path.join(project_root, "drivers", "chromedriver.exe")
+
         driver = webdriver.Chrome(
-            service=ChromeService(
-                ChromeDriverManager().install()
-            )
+            service=ChromeService(driver_path)
         )
 
     elif browser.lower() == "firefox":
 
+        driver_path = os.path.join(project_root, "drivers", "geckodriver.exe")
+
         driver = webdriver.Firefox(
-            service=FirefoxService(
-                GeckoDriverManager().install()
-            )
+            service=FirefoxService(driver_path)
         )
 
     elif browser.lower() == "edge":
 
+        driver_path = os.path.join(project_root, "drivers", "msedgedriver.exe")
+
         driver = webdriver.Edge(
-            service=EdgeService(
-                EdgeChromiumDriverManager().install()
-            )
+            service=EdgeService(driver_path)
         )
 
     else:
-
-        raise Exception(
-            f"Browser '{browser}' not supported."
-        )
+        raise Exception(f"Browser '{browser}' not supported")
 
     driver.maximize_window()
-
     return driver
