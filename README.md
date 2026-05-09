@@ -6,7 +6,7 @@ This project automates end-to-end test scenarios for the SauceDemo e-commerce ap
 
 ---
 
-# Project Highlights
+# Project Highlights        
 
 * Selenium WebDriver with Python
 * Pytest Testing Framework
