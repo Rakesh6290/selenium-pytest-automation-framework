@@ -5,5 +5,5 @@ reports/
 allure-results/
 allure-report/
 screenshots/
-.idea/
+.idea/     
 drivers/*.exe      
