@@ -39,4 +39,4 @@ def get_driver(browser="chrome"):
 
     driver.maximize_window()
 
-    return driver   
+    return driver         
