@@ -1,8 +1,9 @@
 venv/
 __pycache__/
 .pytest_cache/
-report.html
+reports/
 allure-results/
 allure-report/
 screenshots/
 .idea/
+drivers/*.exe
