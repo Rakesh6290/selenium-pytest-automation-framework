@@ -10,8 +10,11 @@ pipeline {
                     where python
                     python --version
 
-                    if not exist reports mkdir reports
-                    if not exist allure-results mkdir allure-results
+                    if exist reports rmdir /s /q reports
+                    if exist allure-results rmdir /s /q allure-results
+
+                    mkdir reports
+                    mkdir allure-results
                 '''
             }
         }
@@ -35,14 +38,6 @@ pipeline {
                     --reruns-delay 2
                 '''
             }   
-        }
-
-        stage('Generate Allure Report') {
-            steps {
-                bat '''
-                    allure generate allure-results -c -o allure-report
-                '''
-            }
         }
     }
 
