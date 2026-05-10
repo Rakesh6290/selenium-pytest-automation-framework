@@ -31,7 +31,7 @@ def get_driver(browser="chrome"):
             )  
         )
 
-    else:
+    else:  
 
         raise Exception(
             f"Browser '{browser}' not supported."
