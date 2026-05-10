@@ -4,17 +4,23 @@ pipeline {
 
     stages {
 
-        stage('Environment Check') {
+        stage('Clean Workspace') {
             steps {
                 bat '''
-                    where python
-                    python --version
-
                     if exist reports rmdir /s /q reports
                     if exist allure-results rmdir /s /q allure-results
 
                     mkdir reports
                     mkdir allure-results
+                '''
+            }
+        }
+
+        stage('Environment Check') {
+            steps {
+                bat '''
+                    where python
+                    python --version
                 '''
             }
         }
@@ -33,9 +39,7 @@ pipeline {
                     python -m pytest ^
                     --html=reports/report.html ^
                     --self-contained-html ^
-                    --alluredir=allure-results ^
-                    --reruns 2 ^
-                    --reruns-delay 2
+                    --alluredir=allure-results
                 '''
             }   
         }
@@ -45,6 +49,7 @@ pipeline {
 
         always {
 
+            // HTML Report
             publishHTML([
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,
@@ -54,6 +59,7 @@ pipeline {
                 reportName: 'Automation Report'
             ])
 
+            // Allure Report
             allure([
                 includeProperties: false,
                 results: [[path: 'allure-results']]

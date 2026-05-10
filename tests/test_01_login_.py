@@ -22,19 +22,19 @@ with open(DATA_PATH) as file:
 @pytest.mark.regression
 @pytest.mark.login
 def test_valid_login(login_page):
+    """
+    Verify user can login with valid credentials.
+    """
     user = test_data["valid_user"]
 
-    with allure.step("Enter username"):
-        login_page.enter_username(user["username"])
+    login_page.login(
+        user["username"],
+        user["password"]
+    )
 
-    with allure.step("Enter password"):
-        login_page.enter_password(user["password"])
+    expected_url_text = test_data["messages"]["login_success_url"]
 
-    with allure.step("Click login button"):
-        login_page.click_login()
-
-    with allure.step("Verify login success"):
-        assert "inventory" in login_page.driver.current_url
+    assert expected_url_text in login_page.driver.current_url
 
 
 # =========================
