@@ -2,12 +2,13 @@ import json
 import pytest
 import allure
 from utils.config import INVENTORY_URL
+import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "login_test_data.json")
 
-with open("data/login_test_data.json") as file:
+with open(DATA_PATH) as file:
     test_data = json.load(file)
-
-
 # =========================
 # ✅ Positive Test Case
 # =========================
@@ -21,19 +22,19 @@ with open("data/login_test_data.json") as file:
 @pytest.mark.regression
 @pytest.mark.login
 def test_valid_login(login_page):
-    """
-    Verify user can login with valid credentials.
-    """
     user = test_data["valid_user"]
 
-    login_page.login(
-        user["username"],
-        user["password"]
-    )
+    with allure.step("Enter username"):
+        login_page.enter_username(user["username"])
 
-    expected_url_text = test_data["messages"]["login_success_url"]
+    with allure.step("Enter password"):
+        login_page.enter_password(user["password"])
 
-    assert expected_url_text in login_page.driver.current_url
+    with allure.step("Click login button"):
+        login_page.click_login()
+
+    with allure.step("Verify login success"):
+        assert "inventory" in login_page.driver.current_url
 
 
 # =========================
