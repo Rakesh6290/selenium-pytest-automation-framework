@@ -28,7 +28,7 @@ def get_driver(browser="chrome"):
         driver = webdriver.Edge(
             service=EdgeService(
                 r"C:\drivers\msedgedriver.exe"
-            )
+            )  
         )
 
     else:
