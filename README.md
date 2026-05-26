@@ -47,6 +47,13 @@ This project automates end-to-end test scenarios for the SauceDemo e-commerce ap
 
 ```text
 selenium-pytest-automation-framework/
+│   
+├── SauceDemo_Manual_Testing
+│   ├── BugReport.xlsx
+│   ├── TestCases.xlsx
+│   └── TestPlan_documentation.docx
+│
+│
 │
 ├── data/
 │   └── login_test_data.json
