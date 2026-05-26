@@ -1,4 +1,4 @@
-# Selenium Pytest Automation Framework
+# E-Commerce Selenium Pytest Automation Framework
 
 A scalable and maintainable UI automation framework built using Python, Selenium, Pytest, and Page Object Model (POM) architecture.
 
@@ -46,7 +46,7 @@ This project automates end-to-end test scenarios for the SauceDemo e-commerce ap
 # Project Structure
 
 ```text
-Login_Automation_Project/
+selenium-pytest-automation-framework/
 │
 ├── data/
 │   └── login_test_data.json
